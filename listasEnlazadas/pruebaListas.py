@@ -23,7 +23,8 @@ class ListaEnlazada:
         ultimo=self.cabeza
         while ultimo.siguiente: #Recorrido de la lista hasta el ultimo nodo
             ultimo=ultimo.siguiente #APUNTAMOS AL SIGUIENTE NODO
-            ultimo.siguiente=nuevoNodo
+        
+        ultimo.siguiente=nuevoNodo
     
     def eliminar(self,dato):
         actual=self.cabeza #Dato actual de la lista
@@ -50,11 +51,21 @@ class ListaEnlazada:
 lista=ListaEnlazada()
 lista.insertarInicio(10)
 lista.insertarInicio(20)
+lista.mostrarLista()
 lista.insertarFinal(30)
 
 lista.mostrarLista()
 lista.eliminar(20)
 lista.mostrarLista()
+lista.insertarInicio(40)
+lista.insertarInicio(50)
+lista.insertarInicio(60)
+lista.insertarInicio(70)
+lista.insertarFinal(80)
+lista.insertarFinal(90)
+lista.insertarFinal(100)
+lista.mostrarLista()
+
 
 
 
