@@ -1,3 +1,25 @@
+#Enunciado TIPO EXAMEN
+#Crea una estructura en Python que permita manejar un sistema de pedidos de una tienda. Este sistema debe incluir las siguientes funcionalidades:
+#1.	Lista enlazada:
+#o	Usar una lista enlazada para mantener el registro de los pedidos realizados. Cada nodo debe contener:
+#	Un número de pedido único.
+#	El nombre del cliente.
+#	El estado del pedido (Pendiente, Procesando, Enviado).
+#o	Permitir agregar y eliminar pedidos.
+#2.	Cola:
+#o	Implementar una cola para manejar los pedidos en estado Pendiente. Los pedidos se procesarán en orden de llegada.
+#3.	Pila:
+#o	Usar una pila para manejar los pedidos que han sido enviados. Esto permite mantener un historial donde los pedidos más recientes se revisen primero.
+#Requerimientos
+#•	Implementa las operaciones necesarias para manejar estas estructuras.
+#•	Al procesar un pedido de la cola, se debe actualizar su estado a Procesando y luego moverlo a la pila como Enviado.
+#•	Proporciona un menú interactivo para que el usuario pueda realizar las siguientes acciones:
+#1.	Agregar un nuevo pedido.
+#2.	Procesar el siguiente pedido.
+#3.	Mostrar el historial de pedidos enviados.
+#4.	Salir.
+
+
 class Nodo:
     def __init__(self,id_pedido,cliente,estado="Pendiente"):
         self.id_pedido=id_pedido
@@ -115,5 +137,3 @@ while True:
         break
     else:
         print("Error opcion invalida, intentelo de nuevo!")
-
-
